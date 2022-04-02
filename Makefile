@@ -1,2 +1,12 @@
-hellomake: main.c read_writefile.c read_writefile.h
-	gcc -o main main.c read_writefile.c
+run: all
+	./build/main.exe
+
+
+all: compile_all
+	
+compile_all:
+	gcc -o ./build/main.exe ./src/main.c ./src/read_writefile.c
+
+clean:
+	del /q build\* 
+	del /q tmp\*
