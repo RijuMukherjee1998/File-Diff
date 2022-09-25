@@ -3,7 +3,7 @@
 
 int main()
 {
-    const char filepath[] = "D:\\Projects\\File-Diff\\test\\601048.jpg";
-    char outfilepath[] = "D:\\Projects\\File-Diff\\tmp\\601048";
+    const char filepath[] = "/home/riju/Desktop/File-Diff/test/test.txt";
+    char outfilepath[] = "/home/riju/Desktop/File-Diff/tmp/test";
     splitFileBytes(filepath, outfilepath, 4);
 }

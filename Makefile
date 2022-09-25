@@ -1,12 +1,12 @@
 run: all
-	./build/main.exe
+	./build/main.out
 
 
 all: compile_all
 	
 compile_all:
-	gcc -o ./build/main.exe ./src/main.c ./src/read_writefile.c
+	gcc -o ./build/main.out ./src/main.c ./src/read_writefile.c
 
 clean:
-	del /q build\* 
-	del /q tmp\*
+	rm -f ./build/* 
+	rm -f ./tmp/*

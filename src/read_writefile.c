@@ -23,7 +23,7 @@ void splitFileBytes(const char in_filepath[], char out_filepath[], int out_byte_
     {
         fseek(infile, 0L, SEEK_END);
         totalBytes = ftell(infile);
-        printf("%d\n",totalBytes);
+        printf("%ld\n",totalBytes);
         fseek(infile,0L,SEEK_SET);
     }
 
@@ -49,7 +49,7 @@ void splitFileBytes(const char in_filepath[], char out_filepath[], int out_byte_
         fread(buffer, sizeof(unsigned char), out_byte_count, infile);
         
         //adding a new file path
-        itoa(i, fileno, 10);
+        snprintf(fileno, 10,"%u",i);
         strcat(new_filepath, fileno);
         printf("%s\n",new_filepath);
 
